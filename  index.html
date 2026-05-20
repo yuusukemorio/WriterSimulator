@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Writer</title>
+<style>
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+#unity-canvas { display: block; width: 100vw; height: 100vh; }
+</style>
+</head>
+<body>
+<canvas id="unity-canvas"></canvas>
+<script src="unity/writer.loader.js"></script>
+<script>
+createUnityInstance(document.querySelector("#unity-canvas"), {
+  dataUrl:      "unity/writer.data.unityweb",
+  frameworkUrl: "unity/writer.framework.js.unityweb",
+  codeUrl:      "unity/writer.wasm.unityweb",
+});
+</script>
+</body>
+</html>
